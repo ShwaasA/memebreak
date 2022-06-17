@@ -1,20 +1,23 @@
 {
-    "manifest_version": 2,
     "name": "memebreak",
     "version": "1.0",
+    "manifest_version": 3,
     "description": "memebreak",
     "icons": {
-        "128": "icon128.png",
-        "48": "icon48.png",
-        "16": "icon16.png"
+        "128": "images/icon128.png",
+        "48": "images/icon48.png",
+        "16": "images/icon16.png"
+        
     },
-    "browser_action": {
-        "default_icon": "icon128.png",
-        "default_popup": "popup.html"
+    "action": {
+        "default_icon": "./images/icon48.png",
+        "default_popup": "src/html/popup.html"
     },
-    "permissions": ["tabs", "https://reddit.com/"],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    }
+    
+    "background":{
+        "service_worker":"src/js/background.js"
+    },
+
+    "permissions": ["tabs","alarms"],
+    "host_permissions": ["https://reddit.com/"]
 }

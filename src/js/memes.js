@@ -10,7 +10,6 @@ const subs = [
 ];
 
 var item = subs[Math.floor(Math.random() * subs.length)];
-
 var url;
 
 fetch("https://meme-api.herokuapp.com/gimme/" + item)
@@ -20,4 +19,6 @@ fetch("https://meme-api.herokuapp.com/gimme/" + item)
 
 setTimeout(function() {
     window.location.reload(1);
-}, 20000);
+}, 30000);
+
+
